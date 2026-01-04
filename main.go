@@ -16,7 +16,7 @@ func main() {
 	r.Use(middleware.Recoverer)
 	r.Use(log.Middleware())
 
-	r.Post("/report", func(w http.ResponseWriter, r *http.Request) {
+	r.Post("/meow", func(w http.ResponseWriter, r *http.Request) {
 		reports := ParseReport(r.Body)
 		if len(reports) == 0 {
 			w.WriteHeader(http.StatusBadRequest)

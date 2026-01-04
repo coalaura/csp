@@ -25,13 +25,13 @@ Reports are logged to stdout:
 ## nginx
 
 ```nginx
-more_set_headers "Content-Security-Policy: default-src 'self'; ...; report-uri https://your-domain.com/report;";
+more_set_headers "Content-Security-Policy: default-src 'self'; ...; report-uri https://your-domain.com/meow;";
 ```
 
 Proxy to the collector:
 
 ```nginx
-location = /report {
+location = /meow {
     proxy_pass http://127.0.0.1:9393;
 }
 ```
